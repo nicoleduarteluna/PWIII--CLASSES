@@ -1,0 +1,22 @@
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.Date;
+
+public class Tarefa {
+	public Long id;
+	public String titulo;
+	public String descricao;
+	public Date dataPrevista;
+	
+	public String toString () {
+		return String.format("Título: %s \nDescrição: %s \nData Prevista: %s", titulo, descricao, dataPrevista);
+	}
+	
+	public LocalDate getDias() {
+		LocalDate localDate = LocalDate.now();
+		return localDate;
+		
+		
+		
+	}
+}

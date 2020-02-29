@@ -1,0 +1,23 @@
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.Date;
+
+public class FeriadoTest {
+	public static void main(String[] args) {
+		Feriado obj = new Feriado ();
+		obj.tipoFeriado = "Nacional";
+		obj.descricao = "Natal";
+		
+		
+		LocalDate ld = LocalDate.of(2020, 12, 25);
+		Date dataFeriado = Date.from(ld.atStartOfDay(ZoneId.systemDefault()).toInstant());
+		obj.data = dataFeriado;
+		
+		
+		
+		
+		
+		System.out.println(obj.toString());
+		System.out.println("Tipo Feriado: " + obj.tipoFeriado + "\nDescrição:  " + obj.descricao + "\nData prevista: " + obj.data);
+	}
+}

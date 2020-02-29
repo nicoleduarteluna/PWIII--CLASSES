@@ -1,0 +1,11 @@
+import java.util.Date;
+
+public class TarefaTest {
+	public static void main(String[] args) {
+		Tarefa trf = new Tarefa();
+		trf.titulo = "TCC";
+		trf.descricao = "Importantíssimo";
+		trf.dataPrevista = new Date();
+		System.out.println(trf.toString());
+	}
+}

@@ -1,0 +1,9 @@
+import java.util.Date;
+
+public class Feriado {
+	public Long id;
+	public String tipoFeriado;
+	public String descricao;
+	public Date data;
+	
+}

@@ -1,0 +1,19 @@
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.Date;
+
+public class TarefaTest {
+	public static void main(String[] args) {
+		Tarefa trf = new Tarefa();
+		trf.titulo = "TCC";
+		trf.descricao = "Importantíssimo";
+		trf.dataPrevista = new Date();
+		
+		LocalDate ld = LocalDate.of(2020, 03, 01);
+		trf.dataPrevista = Date.from(ld.atStartOfDay(ZoneId.systemDefault()).toInstant());
+		
+		
+		System.out.println(trf.toString());
+		System.out.println("Título: " + trf.titulo + "\nDescrição: " + trf.descricao + "\nData Prevista: " + trf.dataPrevista); 
+	}
+}
